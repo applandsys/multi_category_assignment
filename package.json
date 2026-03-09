@@ -2,7 +2,7 @@
   "name": "backend-category-assignment",
   "version": "1.0.0",
   "private": true,
-  "description": "Backend developer assignment: nested categories with GraphQL, REST, MongoDB, Redis, TypeScript and Express.",
+  "description": "Backend developer assignment for Walton Plaza",
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
