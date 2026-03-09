@@ -1,8 +1,6 @@
 import dotenv from 'dotenv';
-
-dotenv.config();
-
 import {asNumber} from "../utils/typeConvert";
+dotenv.config();
 
 export const env = {
     nodeEnv: process.env.NODE_ENV ?? 'development',
