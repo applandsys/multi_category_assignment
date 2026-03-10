@@ -12,3 +12,5 @@ export const env = {
     maxCategoryDepth: asNumber(process.env.MAX_CATEGORY_DEPTH, 4),
 };
 
+export const isUnlimitedDepth = env.maxCategoryDepth <= 0;
+

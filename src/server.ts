@@ -1,6 +1,7 @@
 import cors from 'cors';
 import express from 'express';
 import { connectMongo } from './config/db.js';
+import categoryRoutes from './route/categoryRoute.js';
 
 export const createApp = async () => {
     await connectMongo();
@@ -15,6 +16,8 @@ export const createApp = async () => {
             message: 'Server is running',
         });
     });
+
+    app.use('/api/categories', categoryRoutes);
 
     return app;
 };
