@@ -8,6 +8,7 @@ const bootstrappingAll = async (): Promise<void> => {
 
     server.listen(env.port, () => {
         console.log(`Server running on PORT ${env.port}`);
+        console.log(`REST endpoint: http://localhost:${env.port}/api/categories`);
     });
 
     const shutdown = async () => {

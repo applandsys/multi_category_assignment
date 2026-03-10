@@ -1,8 +1,6 @@
 import dotenv from 'dotenv';
-
-dotenv.config();
-
 import {asNumber} from "../utils/typeConvert";
+dotenv.config();
 
 export const env = {
     nodeEnv: process.env.NODE_ENV ?? 'development',
@@ -13,4 +11,6 @@ export const env = {
     cacheTtlSeconds: asNumber(process.env.CACHE_TTL_SECONDS, 300),
     maxCategoryDepth: asNumber(process.env.MAX_CATEGORY_DEPTH, 4),
 };
+
+export const isUnlimitedDepth = env.maxCategoryDepth <= 0;
 
