@@ -8,11 +8,14 @@
 - GraphQL
 - Redis caching using Upstash cloud
 
+- `MAX_CATEGORY_DEPTH=0` → unlimited depth mode
+
 
 ## How to Check the Server is Okay
 ```
+npm install
+npm run seed
 npm run dev
-
 ```
 
 then access http://localhost:4000/test
@@ -61,7 +64,7 @@ npm run seed
 ### GRAPH QL TEST
 ```
 Method (POST):
-http://localhost:4000//graphql
+http://localhost:4000/graphql
 ```
 
 ```query Example 
