@@ -9,14 +9,14 @@ const run = async (): Promise<void> => {
     await CategoryModel.deleteMany({});
 
     const electronics = await categoryService.createCategory({ name: 'Electronics' });
-    const accessories = await categoryService.createCategory({
-        name: 'Accessories',
+    const television = await categoryService.createCategory({
+        name: 'Television',
         parentId: electronics?._id?.toString(),
     });
 
     await categoryService.createCategory({
-        name: 'Wearable Accessories',
-        parentId: accessories?._id?.toString(),
+        name: 'TV Accessories',
+        parentId: television?._id?.toString(),
     });
 
     const appliances = await categoryService.createCategory({
@@ -30,7 +30,7 @@ const run = async (): Promise<void> => {
     });
 
     await categoryService.createCategory({
-        name: 'Television',
+        name: 'Refrigerator',
         parentId: homeAppliances?._id?.toString(),
     });
 
