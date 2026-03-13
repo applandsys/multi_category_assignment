@@ -57,3 +57,26 @@ http://localhost:4000/api/categories/:id
 ```
 npm run seed
 ```
+
+### GRAPH QL TEST
+```
+Method (POST):
+http://localhost:4000//graphql
+```
+
+```query Example 
+query {
+  categories {
+    id
+    name
+    depth
+    fullPath
+    isActive
+    parent {
+      id
+      name
+      fullPath
+    }
+  }
+}
+```
